@@ -1,5 +1,5 @@
 # BAR
-Code for our ACL 2025 Paper "BAR: A Backward Reasoning based Agent for Complex Minecraft Tasks"
+Code for our ACL 2025 Paper ["BAR: A Backward Reasoning based Agent for Complex Minecraft Tasks"](https://arxiv.org/abs/2505.14079)
 
 ![BAR](/imgs/method.png "BAR")
 
