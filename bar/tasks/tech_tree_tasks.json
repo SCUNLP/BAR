@@ -1,0 +1,277 @@
+{
+    "stone": {
+        "cobblestone": {
+            "type": "collect",
+            "obj_name": "cobblestone",
+            "obj_num": 1
+        },
+        "cobblestone_wall": {
+            "type": "obtain",
+            "obj_name": "cobblestone_wall",
+            "obj_num": 1
+        },
+        "stone_shovel": {
+            "type": "obtain",
+            "obj_name": "stone_shovel",
+            "obj_num": 1
+        },
+        "stone_pickaxe": {
+            "type": "obtain",
+            "obj_name": "stone_pickaxe",
+            "obj_num": 1
+        },
+        "stone_axe": {
+            "type": "obtain",
+            "obj_name": "stone_axe",
+            "obj_num": 1
+        },
+        "stone_hoe": {
+            "type": "obtain",
+            "obj_name": "stone_hoe",
+            "obj_num": 1
+        },
+        "charcoal": {
+            "type": "obtain",
+            "obj_name": "charcoal",
+            "obj_num": 1
+        },
+        "smoker": {
+            "type": "obtain",
+            "obj_name": "smoker",
+            "obj_num": 1
+        },
+        "stone_sword": {
+            "type": "obtain",
+            "obj_name": "stone_sword",
+            "obj_num": 1
+        },
+        "furnace": {
+            "type": "obtain",
+            "obj_name": "furnace",
+            "obj_num": 1
+        },
+        "torch": {
+            "type": "obtain",
+            "obj_name": "torch",
+            "obj_num": 1
+        }
+    },
+    "iron":{
+        "iron_axe": {
+            "type": "obtain",
+            "obj_name": "iron_axe",
+            "obj_num": 1
+        },
+        "iron_pickaxe": {
+            "type": "obtain",
+            "obj_name": "iron_pickaxe",
+            "obj_num": 1
+        },
+        "iron_shovel": {
+            "type": "obtain",
+            "obj_name": "iron_shovel",
+            "obj_num": 1
+        },
+        "iron_sword": {
+            "type": "obtain",
+            "obj_name": "iron_sword",
+            "obj_num": 1
+        },
+        "iron_trapdoor": {
+            "type": "obtain",
+            "obj_name": "iron_trapdoor",
+            "obj_num": 1
+        },
+        "iron_door": {
+            "type": "obtain",
+            "obj_name": "iron_door",
+            "obj_num": 1
+        },
+        "iron_ingot": {
+            "type": "obtain",
+            "obj_name": "iron_ingot",
+            "obj_num": 1
+        },
+        "bucket": {
+            "type": "obtain",
+            "obj_name": "bucket",
+            "obj_num": 1
+        },
+        "rail": {
+            "type": "obtain",
+            "obj_name": "rail",
+            "obj_num": 1
+        },
+        "minecart": {
+            "type": "obtain",
+            "obj_name": "minecart",
+            "obj_num": 1
+        },
+        "smithing_table": {
+            "type": "obtain",
+            "obj_name": "smithing_table",
+            "obj_num": 1
+        },
+        "tripwire_hook": {
+            "type": "obtain",
+            "obj_name": "tripwire_hook",
+            "obj_num": 1
+        },
+        "chain": {
+            "type": "obtain",
+            "obj_name": "chain",
+            "obj_num": 1
+        },
+        "iron_bars": {
+            "type": "obtain",
+            "obj_name": "iron_bars",
+            "obj_num": 1
+        },
+        "hopper": {
+            "type": "obtain",
+            "obj_name": "hopper",
+            "obj_num": 1
+        },
+        "iron_nugget": {
+            "type": "obtain",
+            "obj_name": "iron_nugget",
+            "obj_num": 1
+        },
+        "heavy_weighted_pressure_plate": {
+            "type": "obtain",
+            "obj_name": "heavy_weighted_pressure_plate",
+            "obj_num": 1
+        },
+        "blast_furnace": {
+            "type": "obtain",
+            "obj_name": "blast_furnace",
+            "obj_num": 1
+        },
+        "shears": {
+            "type": "obtain",
+            "obj_name": "shears",
+            "obj_num": 1
+        },
+        "stonecutter": {
+            "type": "obtain",
+            "obj_name": "stonecutter",
+            "obj_num": 1
+        },
+        "iron_hoe": {
+            "type": "obtain",
+            "obj_name": "iron_hoe",
+            "obj_num": 1
+        }
+    },
+    "gold":{
+        "golden_pickaxe": {
+            "type": "obtain",
+            "obj_name": "golden_pickaxe",
+            "obj_num": 1
+        },
+        "golden_shovel": {
+            "type": "obtain",
+            "obj_name": "golden_shovel",
+            "obj_num": 1
+        },
+        "golden_sword": {
+            "type": "obtain",
+            "obj_name": "golden_sword",
+            "obj_num": 1
+        },
+        "golden_hoe": {
+            "type": "obtain",
+            "obj_name": "golden_hoe",
+            "obj_num": 1
+        },
+        "golden_axe": {
+            "type": "obtain",
+            "obj_name": "golden_axe",
+            "obj_num": 1
+        },
+        "gold_nugget": {
+            "type": "obtain",
+            "obj_name": "gold_nugget",
+            "obj_num": 1
+        },
+        "gold_ingot": {
+            "type": "obtain",
+            "obj_name": "gold_ingot",
+            "obj_num": 1
+        }
+    },
+    "diamond":{
+        "diamond": {
+            "type": "collect",
+            "obj_name": "diamond",
+            "obj_num": 1
+        },
+        "diamond_pickaxe": {
+            "type": "obtain",
+            "obj_name": "diamond_pickaxe",
+            "obj_num": 1
+        },
+        "diamond_shovel": {
+            "type": "obtain",
+            "obj_name": "diamond_shovel",
+            "obj_num": 1
+        },
+        "diamond_sword": {
+            "type": "obtain",
+            "obj_name": "diamond_sword",
+            "obj_num": 1
+        },
+        "diamond_hoe": {
+            "type": "obtain",
+            "obj_name": "diamond_hoe",
+            "obj_num": 1
+        },
+        "diamond_axe": {
+            "type": "obtain",
+            "obj_name": "diamond_axe",
+            "obj_num": 1
+        },
+        "jukebox": {
+            "type": "obtain",
+            "obj_name": "jukebox",
+            "obj_num": 1
+        }
+    },
+    "redstone":{
+        "piston": {
+            "type": "obtain",
+            "obj_name": "piston",
+            "obj_num": 1
+        },
+        "redstone_torch": {
+            "type": "obtain",
+            "obj_name": "redstone_torch",
+            "obj_num": 1
+        },
+        "redstone_block": {
+            "type": "obtain",
+            "obj_name": "redstone_block",
+            "obj_num": 1
+        },
+        "activator_rail": {
+            "type": "obtain",
+            "obj_name": "activator_rail",
+            "obj_num": 1
+        },
+        "compass": {
+            "type": "obtain",
+            "obj_name": "compass",
+            "obj_num": 1
+        },
+        "dropper": {
+            "type": "obtain",
+            "obj_name": "dropper",
+            "obj_num": 1
+        },
+        "note_block": {
+            "type": "obtain",
+            "obj_name": "note_block",
+            "obj_num": 1
+        }
+    }
+}

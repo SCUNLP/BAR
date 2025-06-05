@@ -1,0 +1,103 @@
+{
+      "minecraft:logs": [
+     "minecraft:dark_oak_log",
+     "minecraft:stripped_dark_oak_log",
+     "minecraft:oak_log",
+     "minecraft:stripped_oak_log",
+     "minecraft:acacia_log",
+     "minecraft:stripped_acacia_log",
+     "minecraft:birch_log",
+     "minecraft:stripped_birch_log",
+     "minecraft:jungle_log",
+     "minecraft:stripped_jungle_log",
+     "minecraft:spruce_log",
+     "minecraft:stripped_spruce_log",
+     "minecraft:dark_oak_logs",
+     "minecraft:oak_logs",
+     "minecraft:acacia_logs",
+     "minecraft:birch_logs",
+     "minecraft:jungle_logs",
+     "minecraft:spruce_logs"
+      ],
+
+      "minecraft:logs_that_burn": [
+     "minecraft:dark_oak_log",
+     "minecraft:dark_oak_wood",
+     "minecraft:stripped_dark_oak_log",
+     "minecraft:stripped_dark_oak_wood",
+     "minecraft:oak_log",
+     "minecraft:oak_wood",
+     "minecraft:stripped_oak_log",
+     "minecraft:stripped_oak_wood",
+     "minecraft:acacia_log",
+     "minecraft:acacia_wood",
+     "minecraft:stripped_acacia_log",
+     "minecraft:stripped_acacia_wood",
+     "minecraft:birch_log",
+     "minecraft:birch_wood",
+     "minecraft:stripped_birch_log",
+     "minecraft:stripped_birch_wood",
+     "minecraft:jungle_log",
+     "minecraft:jungle_wood",
+     "minecraft:stripped_jungle_log",
+     "minecraft:stripped_jungle_wood",
+     "minecraft:spruce_log",
+     "minecraft:spruce_wood",
+     "minecraft:stripped_spruce_log",
+     "minecraft:stripped_spruce_wood"
+    ],
+
+     "minecraft:ore": [
+          "minecraft:iron_ore",
+          "minecraft:gold_ore",
+          "minecraft:gold_ores",
+          "minecraft:diamond"
+     ],
+     "minecraft:stone_tool_materials": [
+          "minecraft:cobblestone",
+          "minecraft:blackstone"
+     ],
+    "minecraft:redstone": [
+          "minecraft:redstone"
+     ],
+    "minecraft:recipe_materials": [
+          "minecraft:string"
+     ],
+     "minecraft:wool": [
+     "minecraft:white_wool",
+     "minecraft:orange_wool",
+     "minecraft:magenta_wool",
+     "minecraft:light_blue_wool",
+     "minecraft:yellow_wool",
+     "minecraft:lime_wool",
+     "minecraft:pink_wool",
+     "minecraft:gray_wool",
+     "minecraft:light_gray_wool",
+     "minecraft:cyan_wool",
+     "minecraft:purple_wool",
+     "minecraft:blue_wool",
+     "minecraft:brown_wool",
+     "minecraft:green_wool",
+     "minecraft:red_wool",
+     "minecraft:black_wool"
+    ],
+     "minecraft:flowers": [
+     "minecraft:dandelion",
+     "minecraft:poppy",
+     "minecraft:blue_orchid",
+     "minecraft:allium",
+     "minecraft:azure_bluet",
+     "minecraft:red_tulip",
+     "minecraft:orange_tulip",
+     "minecraft:white_tulip",
+     "minecraft:pink_tulip",
+     "minecraft:oxeye_daisy",
+     "minecraft:cornflower",
+     "minecraft:lily_of_the_valley",
+     "minecraft:wither_rose",
+     "minecraft:sunflower",
+     "minecraft:lilac",
+     "minecraft:peony",
+     "minecraft:rose_bush"
+    ]
+}

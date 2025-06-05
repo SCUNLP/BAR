@@ -1,0 +1,2 @@
+2024-05-28 14:50:42 server process_watcher[1239647] INFO Process watcher started between parent 1239391 and child 1239543 
+2024-05-28 14:51:34 server process_watcher[1239647] INFO Child is not running anymore, launcher can terminate.

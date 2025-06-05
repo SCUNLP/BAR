@@ -1,0 +1,63 @@
+{
+  "mine": {
+    "logs": {
+      "text": "chop down the tree",
+      "type": "mine",
+      "object_item": null,
+      "timeout": 3000
+    },
+    "cobblestone": {
+      "text": "collect stone",
+      "type": "mine",
+      "object_item": null,
+      "timeout": 3000
+    },
+    "iron_ore": {
+      "text": "collect iron ore",
+      "type": "mine",
+      "object_item": null,
+      "timeout": 6000
+    },
+    "gold_ore": {
+      "text": "collect gold ore",
+      "type": "mine",
+      "object_item": null,
+      "timeout": 6000
+    },
+    "redstone": {
+      "text": "collect redstone",
+      "type": "mine",
+      "object_item": null,
+      "timeout": 6000
+    },
+    "diamond": {
+      "text": "collect diamond",
+      "type": "mine",
+      "object_item": null,
+      "timeout": 6000
+    }
+  },
+
+  "special": {
+    "dig down": {
+      "text": "dig down",
+      "type": "special",
+      "object_item": null,
+      "timeout": 1000
+      },
+
+    "look straight ahead": {
+      "text": "look straight ahead",
+      "type": "special",
+      "object_item": null,
+      "timeout": 100
+      },
+
+    "explore the surroundings": {
+      "text": "explore the surroundings",
+      "type": "special",
+      "object_item": null,
+      "timeout": 150
+      }
+  }
+}

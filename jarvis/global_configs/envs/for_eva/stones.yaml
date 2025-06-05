@@ -1,0 +1,52 @@
+close_ended: True
+seed: 19961103
+random_tp_range: 1000
+origin_resolution: [640, 360]
+resize_resolution: [640, 360]
+time_limit: 10000
+fast_reset: FALSE
+slow_reset_interval: 1
+start_time: 0
+candidate_preferred_spawn_biome: 
+  - forest
+candidate_weather: 
+  - clear
+
+#custom_init_commands:  # give the agent 4 dark_oak_planks at the beginning
+#  - /replaceitem entity @s weapon.mainhand minecraft:acacia_log 10
+
+custom_init_commands:
+  - /tp @a -78.5 64 -511.5
+#  - /gamerule keepInventory true  # keep inventory after death
+  - /effect give @a night_vision 99999 250 true  # give night vision
+  - /difficulty peaceful  # peaceful mode
+  - /gamerule doDaylightCycle false  # stop day-night cycle
+  - /time set 0  # set time to 0
+  - /gamerule sendCommandFeedback false  # disable command feedback
+  # 控制木头种类，石头种类，消除地上长的花
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:oak_log replace minecraft:birch_log
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:oak_log replace minecraft:spruce_log
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:oak_log replace minecraft:jungle_log
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:oak_log replace minecraft:acacia_log
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:oak_log replace minecraft:dark_oak_log
+  - /fill ~-31 ~-6 ~-31 ~32 ~1 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-13 ~-31 ~32 ~-6 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-20 ~-31 ~32 ~-13 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-27 ~-31 ~32 ~-20 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:sunflower
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:lilac
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:peony
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:dandelion
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:poppy
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:blue_orchid
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:allium
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:azure_bluet
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:red_tulip
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:orange_tulip
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:white_tulip
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:pink_tulip
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:oxeye_daisy
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:cornflower
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:lily_of_the_valley
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:wither_rose
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:rose_bush

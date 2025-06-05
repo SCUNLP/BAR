@@ -1,0 +1,31 @@
+close_ended: True
+seed: 19961103
+random_tp_range: 1000
+origin_resolution: [640, 360]
+resize_resolution: [640, 360]
+time_limit: 12000
+fast_reset: False
+slow_reset_interval: 1
+start_time: 0
+candidate_preferred_spawn_biome: 
+  - forest
+candidate_weather: 
+  - clear
+
+#custom_init_commands:  # give the agent 4 dark_oak_planks at the beginning
+#  - /replaceitem entity @s weapon.mainhand minecraft:acacia_log 10
+
+custom_init_commands:
+  - /tp @a -78.5 64 -511.5
+#  - /gamerule keepInventory true  # keep inventory after death
+  - /effect give @a night_vision 99999 250 true  # give night vision
+  - /difficulty peaceful  # peaceful mode
+  - /gamerule doDaylightCycle false  # stop day-night cycle
+  - /time set 0  # set time to 0
+  - /gamerule sendCommandFeedback false  # disable command feedback
+  - /fill ~-33 ~-1 ~-33 ~33 ~5 ~33 minecraft:oak_log replace minecraft:birch_log
+  - /fill ~-33 ~-1 ~-33 ~33 ~5 ~33 minecraft:oak_log replace minecraft:spruce_log
+  - /fill ~-33 ~-1 ~-33 ~33 ~5 ~33 minecraft:oak_log replace minecraft:jungle_log
+  - /fill ~-33 ~-1 ~-33 ~33 ~5 ~33 minecraft:oak_log replace minecraft:acacia_log
+  - /fill ~-33 ~-1 ~-33 ~33 ~5 ~33 minecraft:oak_log replace minecraft:dark_oak_log
+  - /fill ~-33 ~-7 ~-33 ~33 ~-1 ~33 minecraft:cobblestone replace minecraft:stone

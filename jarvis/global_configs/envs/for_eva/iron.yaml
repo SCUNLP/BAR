@@ -1,0 +1,775 @@
+close_ended: True
+seed: 19961103
+random_tp_range: 1000
+origin_resolution: [640, 360]
+resize_resolution: [640, 360]
+time_limit: 12000  # TODO 记得改回来
+fast_reset: False
+slow_reset_interval: 1
+start_time: 0
+candidate_preferred_spawn_biome: 
+  - forest
+candidate_weather: 
+  - clear
+
+#custom_init_commands:  # give the agent 4 dark_oak_planks at the beginning
+#  - /replaceitem entity @s weapon.mainhand minecraft:acacia_log 10
+
+custom_init_commands:
+  - /tp @a -78.5 64 -511.5
+  # - /gamerule keepInventory true  # keep inventory after death
+  - /effect give @a night_vision 99999 250 true  # give night vision
+  - /difficulty peaceful  # peaceful mode
+  - /gamerule doDaylightCycle false  # stop day-night cycle
+  - /time set 0  # set time to 0
+  - /gamerule sendCommandFeedback false  # disable command feedback
+
+  # 控制木头种类
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:oak_log replace minecraft:birch_log
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:oak_log replace minecraft:spruce_log
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:oak_log replace minecraft:jungle_log
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:oak_log replace minecraft:acacia_log
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:oak_log replace minecraft:dark_oak_log
+  # 控制石头种类
+  - /fill ~-31 ~-6 ~-31 ~32 ~1 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-13 ~-31 ~32 ~-6 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-20 ~-31 ~32 ~-13 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-27 ~-31 ~32 ~-20 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-34 ~-31 ~32 ~-27 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-41 ~-31 ~32 ~-34 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-48 ~-31 ~32 ~-41 ~32 minecraft:cobblestone replace minecraft:stone
+
+  - /fill ~-94 ~-6 ~-31 ~-31 ~1 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-13 ~-31 ~-31 ~-6 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-20 ~-31 ~-31 ~-13 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-27 ~-31 ~-31 ~-20 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-34 ~-31 ~-31 ~-27 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-41 ~-31 ~-31 ~-34 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-48 ~-31 ~-31 ~-41 ~32 minecraft:cobblestone replace minecraft:stone
+
+  - /fill ~-94 ~-6 ~-94 ~-31 ~1 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-13 ~-94 ~-31 ~-6 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-20 ~-94 ~-31 ~-13 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-27 ~-94 ~-31 ~-20 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-34 ~-94 ~-31 ~-27 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-41 ~-94 ~-31 ~-34 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-48 ~-94 ~-31 ~-41 ~-31 minecraft:cobblestone replace minecraft:stone
+
+  - /fill ~-31 ~-6 ~ -94 ~32 ~1 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-13 ~-94 ~32 ~-6 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-20 ~-94 ~32 ~-13 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-27 ~-94 ~32 ~-20 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-34 ~-94 ~32 ~-27 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-41 ~-94 ~32 ~-34 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-48 ~-94 ~32 ~-41 ~-31 minecraft:cobblestone replace minecraft:stone
+
+  - /fill ~-32 ~-6 ~-94 ~95 ~1 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-32 ~-13 ~-94 ~95 ~-6 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-32 ~-20 ~-94 ~95 ~-13 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-32 ~-27 ~-94 ~95 ~-20 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-32 ~-34 ~-94 ~95 ~-27 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-32 ~-41 ~-94 ~95 ~-34 ~-31 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-32 ~-48 ~-94 ~95 ~-41 ~-31 minecraft:cobblestone replace minecraft:stone
+
+  - /fill ~32 ~-6 ~-31 ~95 ~1 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-13 ~-31 ~95 ~-6 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-20 ~-31 ~95 ~-13 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-27 ~-31 ~95 ~-20 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-34 ~-31 ~95 ~-27 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-41 ~-31 ~95 ~-34 ~32 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-48 ~-31 ~95 ~-41 ~32 minecraft:cobblestone replace minecraft:stone
+
+  - /fill ~32 ~-6 ~32 ~95 ~1 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-13 ~32 ~95 ~-6 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-20 ~32 ~95 ~-13 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-27 ~32 ~95 ~-20 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-34 ~32 ~95 ~-27 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-41 ~32 ~95 ~-34 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~32 ~-48 ~32 ~95 ~-41 ~95 minecraft:cobblestone replace minecraft:stone
+
+  - /fill ~-31 ~-6 ~32 ~32 ~1 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-13 ~32 ~32 ~-6 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-20 ~32 ~32 ~-13 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-27 ~32 ~32 ~-20 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-34 ~32 ~32 ~-27 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-41 ~32 ~32 ~-34 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-31 ~-48 ~32 ~32 ~-41 ~95 minecraft:cobblestone replace minecraft:stone
+
+
+  - /fill ~-94 ~-6 ~32 ~-31 ~1 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-13 ~32 ~-31 ~-6 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-20 ~32 ~-31 ~-13 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-27 ~32 ~-31 ~-20 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-34 ~32 ~-31 ~-27 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-41 ~32 ~-31 ~-34 ~95 minecraft:cobblestone replace minecraft:stone
+  - /fill ~-94 ~-48 ~32 ~-31 ~-41 ~95 minecraft:cobblestone replace minecraft:stone
+
+  # 地下沙砾消失
+  - /fill ~-31 ~-6 ~-31 ~32 ~1 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-13 ~-31 ~32 ~-6 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-20 ~-31 ~32 ~-13 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-27 ~-31 ~32 ~-20 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-34 ~-31 ~32 ~-27 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-41 ~-31 ~32 ~-34 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-48 ~-31 ~32 ~-41 ~32 minecraft:cobblestone replace minecraft:gravel
+
+  - /fill ~-94 ~-6 ~-31 ~-31 ~1 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-13 ~-31 ~-31 ~-6 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-20 ~-31 ~-31 ~-13 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-27 ~-31 ~-31 ~-20 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-34 ~-31 ~-31 ~-27 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-41 ~-31 ~-31 ~-34 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-48 ~-31 ~-31 ~-41 ~32 minecraft:cobblestone replace minecraft:gravel
+
+  - /fill ~-94 ~-6 ~-94 ~-31 ~1 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-13 ~-94 ~-31 ~-6 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-20 ~-94 ~-31 ~-13 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-27 ~-94 ~-31 ~-20 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-34 ~-94 ~-31 ~-27 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-41 ~-94 ~-31 ~-34 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-48 ~-94 ~-31 ~-41 ~-31 minecraft:cobblestone replace minecraft:gravel
+
+  - /fill ~-31 ~-6 ~ -94 ~32 ~1 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-13 ~-94 ~32 ~-6 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-20 ~-94 ~32 ~-13 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-27 ~-94 ~32 ~-20 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-34 ~-94 ~32 ~-27 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-41 ~-94 ~32 ~-34 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-48 ~-94 ~32 ~-41 ~-31 minecraft:cobblestone replace minecraft:gravel
+
+  - /fill ~-32 ~-6 ~-94 ~95 ~1 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-32 ~-13 ~-94 ~95 ~-6 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-32 ~-20 ~-94 ~95 ~-13 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-32 ~-27 ~-94 ~95 ~-20 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-32 ~-34 ~-94 ~95 ~-27 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-32 ~-41 ~-94 ~95 ~-34 ~-31 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-32 ~-48 ~-94 ~95 ~-41 ~-31 minecraft:cobblestone replace minecraft:gravel
+
+  - /fill ~32 ~-6 ~-31 ~95 ~1 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-13 ~-31 ~95 ~-6 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-20 ~-31 ~95 ~-13 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-27 ~-31 ~95 ~-20 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-34 ~-31 ~95 ~-27 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-41 ~-31 ~95 ~-34 ~32 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-48 ~-31 ~95 ~-41 ~32 minecraft:cobblestone replace minecraft:gravel
+
+  - /fill ~32 ~-6 ~32 ~95 ~1 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-13 ~32 ~95 ~-6 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-20 ~32 ~95 ~-13 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-27 ~32 ~95 ~-20 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-34 ~32 ~95 ~-27 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-41 ~32 ~95 ~-34 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~32 ~-48 ~32 ~95 ~-41 ~95 minecraft:cobblestone replace minecraft:gravel
+
+  - /fill ~-31 ~-6 ~32 ~32 ~1 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-13 ~32 ~32 ~-6 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-20 ~32 ~32 ~-13 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-27 ~32 ~32 ~-20 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-34 ~32 ~32 ~-27 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-41 ~32 ~32 ~-34 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-31 ~-48 ~32 ~32 ~-41 ~95 minecraft:cobblestone replace minecraft:gravel
+
+
+  - /fill ~-94 ~-6 ~32 ~-31 ~1 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-13 ~32 ~-31 ~-6 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-20 ~32 ~-31 ~-13 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-27 ~32 ~-31 ~-20 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-34 ~32 ~-31 ~-27 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-41 ~32 ~-31 ~-34 ~95 minecraft:cobblestone replace minecraft:gravel
+  - /fill ~-94 ~-48 ~32 ~-31 ~-41 ~95 minecraft:cobblestone replace minecraft:gravel
+  # 地面花草消失
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:sunflower
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:lilac
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:peony
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:dandelion
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:poppy
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:blue_orchid
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:allium
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:azure_bluet
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:red_tulip
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:orange_tulip
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:white_tulip
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:pink_tulip
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:oxeye_daisy
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:cornflower
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:lily_of_the_valley
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:wither_rose
+  - /fill ~-31 ~-2 ~-31 ~32 ~5 ~32 minecraft:air replace minecraft:rose_bush
+
+  # 脚本生成的iron_ore填充指令
+  - /fill ~-10 ~-23 ~10 ~10 ~-23 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-23 ~-10 ~10 ~-23 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-23 ~6 ~-7 ~-23 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-23 ~6 ~7 ~-23 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-23 ~18 ~18 ~-23 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-23 ~-18 ~18 ~-23 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-23 ~14 ~-15 ~-23 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-23 ~14 ~15 ~-23 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-23 ~26 ~26 ~-23 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-23 ~-26 ~26 ~-23 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-23 ~22 ~-23 ~-23 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-23 ~22 ~23 ~-23 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-23 ~34 ~34 ~-23 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-23 ~-34 ~34 ~-23 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-23 ~30 ~-31 ~-23 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-23 ~30 ~31 ~-23 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-23 ~42 ~42 ~-23 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-23 ~-42 ~42 ~-23 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-23 ~38 ~-39 ~-23 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-23 ~38 ~39 ~-23 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-23 ~50 ~50 ~-23 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-23 ~-50 ~50 ~-23 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-23 ~46 ~-47 ~-23 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-23 ~46 ~47 ~-23 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-23 ~58 ~58 ~-23 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-23 ~-58 ~58 ~-23 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-23 ~54 ~-55 ~-23 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-23 ~54 ~55 ~-23 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-23 ~66 ~66 ~-23 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-23 ~-66 ~66 ~-23 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-23 ~62 ~-63 ~-23 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-23 ~62 ~63 ~-23 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-24 ~10 ~10 ~-24 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-24 ~-10 ~10 ~-24 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-24 ~6 ~-7 ~-24 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-24 ~6 ~7 ~-24 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-24 ~18 ~18 ~-24 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-24 ~-18 ~18 ~-24 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-24 ~14 ~-15 ~-24 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-24 ~14 ~15 ~-24 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-24 ~26 ~26 ~-24 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-24 ~-26 ~26 ~-24 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-24 ~22 ~-23 ~-24 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-24 ~22 ~23 ~-24 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-24 ~34 ~34 ~-24 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-24 ~-34 ~34 ~-24 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-24 ~30 ~-31 ~-24 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-24 ~30 ~31 ~-24 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-24 ~42 ~42 ~-24 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-24 ~-42 ~42 ~-24 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-24 ~38 ~-39 ~-24 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-24 ~38 ~39 ~-24 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-24 ~50 ~50 ~-24 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-24 ~-50 ~50 ~-24 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-24 ~46 ~-47 ~-24 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-24 ~46 ~47 ~-24 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-24 ~58 ~58 ~-24 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-24 ~-58 ~58 ~-24 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-24 ~54 ~-55 ~-24 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-24 ~54 ~55 ~-24 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-24 ~66 ~66 ~-24 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-24 ~-66 ~66 ~-24 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-24 ~62 ~-63 ~-24 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-24 ~62 ~63 ~-24 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-25 ~10 ~10 ~-25 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-25 ~-10 ~10 ~-25 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-25 ~6 ~-7 ~-25 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-25 ~6 ~7 ~-25 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-25 ~18 ~18 ~-25 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-25 ~-18 ~18 ~-25 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-25 ~14 ~-15 ~-25 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-25 ~14 ~15 ~-25 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-25 ~26 ~26 ~-25 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-25 ~-26 ~26 ~-25 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-25 ~22 ~-23 ~-25 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-25 ~22 ~23 ~-25 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-25 ~34 ~34 ~-25 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-25 ~-34 ~34 ~-25 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-25 ~30 ~-31 ~-25 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-25 ~30 ~31 ~-25 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-25 ~42 ~42 ~-25 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-25 ~-42 ~42 ~-25 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-25 ~38 ~-39 ~-25 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-25 ~38 ~39 ~-25 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-25 ~50 ~50 ~-25 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-25 ~-50 ~50 ~-25 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-25 ~46 ~-47 ~-25 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-25 ~46 ~47 ~-25 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-25 ~58 ~58 ~-25 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-25 ~-58 ~58 ~-25 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-25 ~54 ~-55 ~-25 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-25 ~54 ~55 ~-25 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-25 ~66 ~66 ~-25 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-25 ~-66 ~66 ~-25 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-25 ~62 ~-63 ~-25 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-25 ~62 ~63 ~-25 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-26 ~10 ~10 ~-26 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-26 ~-10 ~10 ~-26 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-26 ~6 ~-7 ~-26 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-26 ~6 ~7 ~-26 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-26 ~18 ~18 ~-26 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-26 ~-18 ~18 ~-26 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-26 ~14 ~-15 ~-26 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-26 ~14 ~15 ~-26 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-26 ~26 ~26 ~-26 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-26 ~-26 ~26 ~-26 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-26 ~22 ~-23 ~-26 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-26 ~22 ~23 ~-26 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-26 ~34 ~34 ~-26 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-26 ~-34 ~34 ~-26 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-26 ~30 ~-31 ~-26 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-26 ~30 ~31 ~-26 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-26 ~42 ~42 ~-26 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-26 ~-42 ~42 ~-26 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-26 ~38 ~-39 ~-26 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-26 ~38 ~39 ~-26 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-26 ~50 ~50 ~-26 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-26 ~-50 ~50 ~-26 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-26 ~46 ~-47 ~-26 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-26 ~46 ~47 ~-26 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-26 ~58 ~58 ~-26 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-26 ~-58 ~58 ~-26 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-26 ~54 ~-55 ~-26 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-26 ~54 ~55 ~-26 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-26 ~66 ~66 ~-26 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-26 ~-66 ~66 ~-26 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-26 ~62 ~-63 ~-26 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-26 ~62 ~63 ~-26 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-27 ~10 ~10 ~-27 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-27 ~-10 ~10 ~-27 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-27 ~6 ~-7 ~-27 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-27 ~6 ~7 ~-27 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-27 ~18 ~18 ~-27 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-27 ~-18 ~18 ~-27 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-27 ~14 ~-15 ~-27 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-27 ~14 ~15 ~-27 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-27 ~26 ~26 ~-27 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-27 ~-26 ~26 ~-27 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-27 ~22 ~-23 ~-27 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-27 ~22 ~23 ~-27 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-27 ~34 ~34 ~-27 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-27 ~-34 ~34 ~-27 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-27 ~30 ~-31 ~-27 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-27 ~30 ~31 ~-27 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-27 ~42 ~42 ~-27 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-27 ~-42 ~42 ~-27 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-27 ~38 ~-39 ~-27 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-27 ~38 ~39 ~-27 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-27 ~50 ~50 ~-27 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-27 ~-50 ~50 ~-27 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-27 ~46 ~-47 ~-27 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-27 ~46 ~47 ~-27 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-27 ~58 ~58 ~-27 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-27 ~-58 ~58 ~-27 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-27 ~54 ~-55 ~-27 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-27 ~54 ~55 ~-27 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-27 ~66 ~66 ~-27 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-27 ~-66 ~66 ~-27 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-27 ~62 ~-63 ~-27 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-27 ~62 ~63 ~-27 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-28 ~10 ~10 ~-28 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-28 ~-10 ~10 ~-28 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-28 ~6 ~-7 ~-28 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-28 ~6 ~7 ~-28 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-28 ~18 ~18 ~-28 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-28 ~-18 ~18 ~-28 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-28 ~14 ~-15 ~-28 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-28 ~14 ~15 ~-28 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-28 ~26 ~26 ~-28 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-28 ~-26 ~26 ~-28 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-28 ~22 ~-23 ~-28 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-28 ~22 ~23 ~-28 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-28 ~34 ~34 ~-28 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-28 ~-34 ~34 ~-28 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-28 ~30 ~-31 ~-28 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-28 ~30 ~31 ~-28 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-28 ~42 ~42 ~-28 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-28 ~-42 ~42 ~-28 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-28 ~38 ~-39 ~-28 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-28 ~38 ~39 ~-28 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-28 ~50 ~50 ~-28 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-28 ~-50 ~50 ~-28 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-28 ~46 ~-47 ~-28 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-28 ~46 ~47 ~-28 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-28 ~58 ~58 ~-28 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-28 ~-58 ~58 ~-28 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-28 ~54 ~-55 ~-28 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-28 ~54 ~55 ~-28 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-28 ~66 ~66 ~-28 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-28 ~-66 ~66 ~-28 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-28 ~62 ~-63 ~-28 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-28 ~62 ~63 ~-28 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-29 ~10 ~10 ~-29 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-29 ~-10 ~10 ~-29 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-29 ~6 ~-7 ~-29 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-29 ~6 ~7 ~-29 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-29 ~18 ~18 ~-29 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-29 ~-18 ~18 ~-29 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-29 ~14 ~-15 ~-29 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-29 ~14 ~15 ~-29 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-29 ~26 ~26 ~-29 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-29 ~-26 ~26 ~-29 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-29 ~22 ~-23 ~-29 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-29 ~22 ~23 ~-29 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-29 ~34 ~34 ~-29 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-29 ~-34 ~34 ~-29 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-29 ~30 ~-31 ~-29 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-29 ~30 ~31 ~-29 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-29 ~42 ~42 ~-29 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-29 ~-42 ~42 ~-29 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-29 ~38 ~-39 ~-29 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-29 ~38 ~39 ~-29 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-29 ~50 ~50 ~-29 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-29 ~-50 ~50 ~-29 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-29 ~46 ~-47 ~-29 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-29 ~46 ~47 ~-29 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-29 ~58 ~58 ~-29 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-29 ~-58 ~58 ~-29 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-29 ~54 ~-55 ~-29 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-29 ~54 ~55 ~-29 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-29 ~66 ~66 ~-29 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-29 ~-66 ~66 ~-29 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-29 ~62 ~-63 ~-29 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-29 ~62 ~63 ~-29 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-30 ~10 ~10 ~-30 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-30 ~-10 ~10 ~-30 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-30 ~6 ~-7 ~-30 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-30 ~6 ~7 ~-30 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-30 ~18 ~18 ~-30 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-30 ~-18 ~18 ~-30 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-30 ~14 ~-15 ~-30 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-30 ~14 ~15 ~-30 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-30 ~26 ~26 ~-30 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-30 ~-26 ~26 ~-30 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-30 ~22 ~-23 ~-30 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-30 ~22 ~23 ~-30 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-30 ~34 ~34 ~-30 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-30 ~-34 ~34 ~-30 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-30 ~30 ~-31 ~-30 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-30 ~30 ~31 ~-30 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-30 ~42 ~42 ~-30 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-30 ~-42 ~42 ~-30 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-30 ~38 ~-39 ~-30 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-30 ~38 ~39 ~-30 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-30 ~50 ~50 ~-30 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-30 ~-50 ~50 ~-30 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-30 ~46 ~-47 ~-30 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-30 ~46 ~47 ~-30 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-30 ~58 ~58 ~-30 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-30 ~-58 ~58 ~-30 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-30 ~54 ~-55 ~-30 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-30 ~54 ~55 ~-30 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-30 ~66 ~66 ~-30 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-30 ~-66 ~66 ~-30 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-30 ~62 ~-63 ~-30 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-30 ~62 ~63 ~-30 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-31 ~10 ~10 ~-31 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-31 ~-10 ~10 ~-31 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-31 ~6 ~-7 ~-31 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-31 ~6 ~7 ~-31 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-31 ~18 ~18 ~-31 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-31 ~-18 ~18 ~-31 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-31 ~14 ~-15 ~-31 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-31 ~14 ~15 ~-31 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-31 ~26 ~26 ~-31 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-31 ~-26 ~26 ~-31 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-31 ~22 ~-23 ~-31 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-31 ~22 ~23 ~-31 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-31 ~34 ~34 ~-31 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-31 ~-34 ~34 ~-31 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-31 ~30 ~-31 ~-31 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-31 ~30 ~31 ~-31 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-31 ~42 ~42 ~-31 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-31 ~-42 ~42 ~-31 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-31 ~38 ~-39 ~-31 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-31 ~38 ~39 ~-31 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-31 ~50 ~50 ~-31 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-31 ~-50 ~50 ~-31 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-31 ~46 ~-47 ~-31 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-31 ~46 ~47 ~-31 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-31 ~58 ~58 ~-31 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-31 ~-58 ~58 ~-31 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-31 ~54 ~-55 ~-31 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-31 ~54 ~55 ~-31 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-31 ~66 ~66 ~-31 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-31 ~-66 ~66 ~-31 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-31 ~62 ~-63 ~-31 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-31 ~62 ~63 ~-31 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-32 ~10 ~10 ~-32 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-32 ~-10 ~10 ~-32 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-32 ~6 ~-7 ~-32 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-32 ~6 ~7 ~-32 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-32 ~18 ~18 ~-32 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-32 ~-18 ~18 ~-32 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-32 ~14 ~-15 ~-32 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-32 ~14 ~15 ~-32 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-32 ~26 ~26 ~-32 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-32 ~-26 ~26 ~-32 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-32 ~22 ~-23 ~-32 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-32 ~22 ~23 ~-32 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-32 ~34 ~34 ~-32 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-32 ~-34 ~34 ~-32 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-32 ~30 ~-31 ~-32 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-32 ~30 ~31 ~-32 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-32 ~42 ~42 ~-32 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-32 ~-42 ~42 ~-32 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-32 ~38 ~-39 ~-32 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-32 ~38 ~39 ~-32 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-32 ~50 ~50 ~-32 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-32 ~-50 ~50 ~-32 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-32 ~46 ~-47 ~-32 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-32 ~46 ~47 ~-32 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-32 ~58 ~58 ~-32 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-32 ~-58 ~58 ~-32 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-32 ~54 ~-55 ~-32 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-32 ~54 ~55 ~-32 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-32 ~66 ~66 ~-32 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-32 ~-66 ~66 ~-32 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-32 ~62 ~-63 ~-32 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-32 ~62 ~63 ~-32 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-33 ~10 ~10 ~-33 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-33 ~-10 ~10 ~-33 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-33 ~6 ~-7 ~-33 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-33 ~6 ~7 ~-33 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-33 ~18 ~18 ~-33 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-33 ~-18 ~18 ~-33 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-33 ~14 ~-15 ~-33 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-33 ~14 ~15 ~-33 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-33 ~26 ~26 ~-33 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-33 ~-26 ~26 ~-33 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-33 ~22 ~-23 ~-33 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-33 ~22 ~23 ~-33 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-33 ~34 ~34 ~-33 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-33 ~-34 ~34 ~-33 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-33 ~30 ~-31 ~-33 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-33 ~30 ~31 ~-33 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-33 ~42 ~42 ~-33 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-33 ~-42 ~42 ~-33 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-33 ~38 ~-39 ~-33 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-33 ~38 ~39 ~-33 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-33 ~50 ~50 ~-33 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-33 ~-50 ~50 ~-33 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-33 ~46 ~-47 ~-33 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-33 ~46 ~47 ~-33 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-33 ~58 ~58 ~-33 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-33 ~-58 ~58 ~-33 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-33 ~54 ~-55 ~-33 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-33 ~54 ~55 ~-33 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-33 ~66 ~66 ~-33 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-33 ~-66 ~66 ~-33 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-33 ~62 ~-63 ~-33 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-33 ~62 ~63 ~-33 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-34 ~10 ~10 ~-34 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-34 ~-10 ~10 ~-34 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-34 ~6 ~-7 ~-34 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-34 ~6 ~7 ~-34 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-34 ~18 ~18 ~-34 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-34 ~-18 ~18 ~-34 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-34 ~14 ~-15 ~-34 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-34 ~14 ~15 ~-34 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-34 ~26 ~26 ~-34 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-34 ~-26 ~26 ~-34 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-34 ~22 ~-23 ~-34 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-34 ~22 ~23 ~-34 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-34 ~34 ~34 ~-34 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-34 ~-34 ~34 ~-34 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-34 ~30 ~-31 ~-34 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-34 ~30 ~31 ~-34 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-34 ~42 ~42 ~-34 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-34 ~-42 ~42 ~-34 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-34 ~38 ~-39 ~-34 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-34 ~38 ~39 ~-34 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-34 ~50 ~50 ~-34 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-34 ~-50 ~50 ~-34 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-34 ~46 ~-47 ~-34 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-34 ~46 ~47 ~-34 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-34 ~58 ~58 ~-34 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-34 ~-58 ~58 ~-34 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-34 ~54 ~-55 ~-34 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-34 ~54 ~55 ~-34 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-34 ~66 ~66 ~-34 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-34 ~-66 ~66 ~-34 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-34 ~62 ~-63 ~-34 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-34 ~62 ~63 ~-34 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-35 ~10 ~10 ~-35 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-35 ~-10 ~10 ~-35 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-35 ~6 ~-7 ~-35 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-35 ~6 ~7 ~-35 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-35 ~18 ~18 ~-35 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-35 ~-18 ~18 ~-35 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-35 ~14 ~-15 ~-35 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-35 ~14 ~15 ~-35 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-35 ~26 ~26 ~-35 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-35 ~-26 ~26 ~-35 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-35 ~22 ~-23 ~-35 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-35 ~22 ~23 ~-35 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-35 ~34 ~34 ~-35 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-35 ~-34 ~34 ~-35 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-35 ~30 ~-31 ~-35 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-35 ~30 ~31 ~-35 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-35 ~42 ~42 ~-35 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-35 ~-42 ~42 ~-35 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-35 ~38 ~-39 ~-35 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-35 ~38 ~39 ~-35 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-35 ~50 ~50 ~-35 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-35 ~-50 ~50 ~-35 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-35 ~46 ~-47 ~-35 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-35 ~46 ~47 ~-35 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-35 ~58 ~58 ~-35 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-35 ~-58 ~58 ~-35 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-35 ~54 ~-55 ~-35 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-35 ~54 ~55 ~-35 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-35 ~66 ~66 ~-35 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-35 ~-66 ~66 ~-35 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-35 ~62 ~-63 ~-35 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-35 ~62 ~63 ~-35 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-36 ~10 ~10 ~-36 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-36 ~-10 ~10 ~-36 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-36 ~6 ~-7 ~-36 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-36 ~6 ~7 ~-36 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-36 ~18 ~18 ~-36 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-36 ~-18 ~18 ~-36 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-36 ~14 ~-15 ~-36 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-36 ~14 ~15 ~-36 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-36 ~26 ~26 ~-36 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-36 ~-26 ~26 ~-36 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-36 ~22 ~-23 ~-36 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-36 ~22 ~23 ~-36 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-36 ~34 ~34 ~-36 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-36 ~-34 ~34 ~-36 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-36 ~30 ~-31 ~-36 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-36 ~30 ~31 ~-36 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-36 ~42 ~42 ~-36 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-36 ~-42 ~42 ~-36 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-36 ~38 ~-39 ~-36 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-36 ~38 ~39 ~-36 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-36 ~50 ~50 ~-36 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-36 ~-50 ~50 ~-36 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-36 ~46 ~-47 ~-36 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-36 ~46 ~47 ~-36 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-36 ~58 ~58 ~-36 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-36 ~-58 ~58 ~-36 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-36 ~54 ~-55 ~-36 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-36 ~54 ~55 ~-36 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-36 ~66 ~66 ~-36 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-36 ~-66 ~66 ~-36 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-36 ~62 ~-63 ~-36 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-36 ~62 ~63 ~-36 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-37 ~10 ~10 ~-37 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-37 ~-10 ~10 ~-37 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-37 ~6 ~-7 ~-37 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-37 ~6 ~7 ~-37 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-37 ~18 ~18 ~-37 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-37 ~-18 ~18 ~-37 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-37 ~14 ~-15 ~-37 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-37 ~14 ~15 ~-37 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-37 ~26 ~26 ~-37 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-37 ~-26 ~26 ~-37 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-37 ~22 ~-23 ~-37 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-37 ~22 ~23 ~-37 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-37 ~34 ~34 ~-37 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-37 ~-34 ~34 ~-37 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-37 ~30 ~-31 ~-37 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-37 ~30 ~31 ~-37 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-37 ~42 ~42 ~-37 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-37 ~-42 ~42 ~-37 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-37 ~38 ~-39 ~-37 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-37 ~38 ~39 ~-37 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-37 ~50 ~50 ~-37 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-37 ~-50 ~50 ~-37 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-37 ~46 ~-47 ~-37 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-37 ~46 ~47 ~-37 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-37 ~58 ~58 ~-37 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-37 ~-58 ~58 ~-37 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-37 ~54 ~-55 ~-37 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-37 ~54 ~55 ~-37 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-37 ~66 ~66 ~-37 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-37 ~-66 ~66 ~-37 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-37 ~62 ~-63 ~-37 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-37 ~62 ~63 ~-37 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-38 ~10 ~10 ~-38 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-38 ~-10 ~10 ~-38 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-38 ~6 ~-7 ~-38 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-38 ~6 ~7 ~-38 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-38 ~18 ~18 ~-38 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-38 ~-18 ~18 ~-38 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-38 ~14 ~-15 ~-38 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-38 ~14 ~15 ~-38 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-38 ~26 ~26 ~-38 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-38 ~-26 ~26 ~-38 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-38 ~22 ~-23 ~-38 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-38 ~22 ~23 ~-38 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-38 ~34 ~34 ~-38 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-38 ~-34 ~34 ~-38 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-38 ~30 ~-31 ~-38 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-38 ~30 ~31 ~-38 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-38 ~42 ~42 ~-38 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-38 ~-42 ~42 ~-38 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-38 ~38 ~-39 ~-38 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-38 ~38 ~39 ~-38 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-38 ~50 ~50 ~-38 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-38 ~-50 ~50 ~-38 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-38 ~46 ~-47 ~-38 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-38 ~46 ~47 ~-38 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-38 ~58 ~58 ~-38 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-38 ~-58 ~58 ~-38 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-38 ~54 ~-55 ~-38 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-38 ~54 ~55 ~-38 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-38 ~66 ~66 ~-38 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-38 ~-66 ~66 ~-38 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-38 ~62 ~-63 ~-38 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-38 ~62 ~63 ~-38 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-39 ~10 ~10 ~-39 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-39 ~-10 ~10 ~-39 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-39 ~6 ~-7 ~-39 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-39 ~6 ~7 ~-39 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-39 ~18 ~18 ~-39 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-39 ~-18 ~18 ~-39 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-39 ~14 ~-15 ~-39 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-39 ~14 ~15 ~-39 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-39 ~26 ~26 ~-39 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-39 ~-26 ~26 ~-39 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-39 ~22 ~-23 ~-39 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-39 ~22 ~23 ~-39 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-39 ~34 ~34 ~-39 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-39 ~-34 ~34 ~-39 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-39 ~30 ~-31 ~-39 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-39 ~30 ~31 ~-39 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-39 ~42 ~42 ~-39 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-39 ~-42 ~42 ~-39 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-39 ~38 ~-39 ~-39 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-39 ~38 ~39 ~-39 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-39 ~50 ~50 ~-39 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-39 ~-50 ~50 ~-39 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-39 ~46 ~-47 ~-39 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-39 ~46 ~47 ~-39 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-39 ~58 ~58 ~-39 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-39 ~-58 ~58 ~-39 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-39 ~54 ~-55 ~-39 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-39 ~54 ~55 ~-39 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-39 ~66 ~66 ~-39 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-39 ~-66 ~66 ~-39 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-39 ~62 ~-63 ~-39 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-39 ~62 ~63 ~-39 ~-62 minecraft:iron_ore
+  - /fill ~-10 ~-40 ~10 ~10 ~-40 ~7 minecraft:iron_ore
+  - /fill ~-10 ~-40 ~-10 ~10 ~-40 ~-7 minecraft:iron_ore
+  - /fill ~-10 ~-40 ~6 ~-7 ~-40 ~-6 minecraft:iron_ore
+  - /fill ~10 ~-40 ~6 ~7 ~-40 ~-6 minecraft:iron_ore
+  - /fill ~-18 ~-40 ~18 ~18 ~-40 ~15 minecraft:iron_ore
+  - /fill ~-18 ~-40 ~-18 ~18 ~-40 ~-15 minecraft:iron_ore
+  - /fill ~-18 ~-40 ~14 ~-15 ~-40 ~-14 minecraft:iron_ore
+  - /fill ~18 ~-40 ~14 ~15 ~-40 ~-14 minecraft:iron_ore
+  - /fill ~-26 ~-40 ~26 ~26 ~-40 ~23 minecraft:iron_ore
+  - /fill ~-26 ~-40 ~-26 ~26 ~-40 ~-23 minecraft:iron_ore
+  - /fill ~-26 ~-40 ~22 ~-23 ~-40 ~-22 minecraft:iron_ore
+  - /fill ~26 ~-40 ~22 ~23 ~-40 ~-22 minecraft:iron_ore
+  - /fill ~-34 ~-40 ~34 ~34 ~-40 ~31 minecraft:iron_ore
+  - /fill ~-34 ~-40 ~-34 ~34 ~-40 ~-31 minecraft:iron_ore
+  - /fill ~-34 ~-40 ~30 ~-31 ~-40 ~-30 minecraft:iron_ore
+  - /fill ~34 ~-40 ~30 ~31 ~-40 ~-30 minecraft:iron_ore
+  - /fill ~-42 ~-40 ~42 ~42 ~-40 ~39 minecraft:iron_ore
+  - /fill ~-42 ~-40 ~-42 ~42 ~-40 ~-39 minecraft:iron_ore
+  - /fill ~-42 ~-40 ~38 ~-39 ~-40 ~-38 minecraft:iron_ore
+  - /fill ~42 ~-40 ~38 ~39 ~-40 ~-38 minecraft:iron_ore
+  - /fill ~-50 ~-40 ~50 ~50 ~-40 ~47 minecraft:iron_ore
+  - /fill ~-50 ~-40 ~-50 ~50 ~-40 ~-47 minecraft:iron_ore
+  - /fill ~-50 ~-40 ~46 ~-47 ~-40 ~-46 minecraft:iron_ore
+  - /fill ~50 ~-40 ~46 ~47 ~-40 ~-46 minecraft:iron_ore
+  - /fill ~-58 ~-40 ~58 ~58 ~-40 ~55 minecraft:iron_ore
+  - /fill ~-58 ~-40 ~-58 ~58 ~-40 ~-55 minecraft:iron_ore
+  - /fill ~-58 ~-40 ~54 ~-55 ~-40 ~-54 minecraft:iron_ore
+  - /fill ~58 ~-40 ~54 ~55 ~-40 ~-54 minecraft:iron_ore
+  - /fill ~-66 ~-40 ~66 ~66 ~-40 ~63 minecraft:iron_ore
+  - /fill ~-66 ~-40 ~-66 ~66 ~-40 ~-63 minecraft:iron_ore
+  - /fill ~-66 ~-40 ~62 ~-63 ~-40 ~-62 minecraft:iron_ore
+  - /fill ~66 ~-40 ~62 ~63 ~-40 ~-62 minecraft:iron_ore

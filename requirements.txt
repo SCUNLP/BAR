@@ -1,0 +1,15 @@
+torch~=2.7.0
+transformers~=4.49.0
+openai~=1.76.0
+jsonlines~=4.0.0
+bar~=0.1.0
+requests~=2.32.3
+numpy~=1.21.0
+tqdm~=4.67.1
+PyYAML~=6.0.2
+torchvision~=0.22.0
+attrs~=24.3.0
+rich~=14.0.0
+typing_extensions~=4.13.2
+pillow~=11.2.1
+setuptools~=78.1.1

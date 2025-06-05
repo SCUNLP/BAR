@@ -1,0 +1,8 @@
+{"type": "mine", "obj_name": "logs", "obj_num": 3}
+{"type": "craft", "obj_name": "planks", "obj_num": 11, "tool": null}
+{"type": "craft", "obj_name": "stick", "obj_num": 4, "tool": null}
+{"type": "craft", "obj_name": "crafting_table", "obj_num": 1}
+{"type": "craft", "obj_name": "wooden_pickaxe", "obj_num": 1, "tool": null}
+{"type": "special", "obj_name": "dig down", "obj_num": null, "tool": "wooden_pickaxe"}
+{"type": "mine", "obj_name": "cobblestone", "obj_num": 2, "tool": "wooden_pickaxe"}
+{"type": "craft", "obj_name": "stone_hoe", "obj_num": 1, "tool": null}

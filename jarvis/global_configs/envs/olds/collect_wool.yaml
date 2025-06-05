@@ -1,0 +1,36 @@
+close_ended: True
+seed: 19961103
+random_tp_range: 1000
+origin_resolution: [640, 360]
+resize_resolution: [224, 224]
+time_limit: 600
+fast_reset: True
+slow_reset_interval: 9
+start_time: 0
+candidate_preferred_spawn_biome: 
+  - plains
+candidate_weather: 
+  - clear
+
+summon_mobs:
+  - 
+    mob_name: sheep
+    range_x: [-5, 5]
+    range_z: [-3, 3]
+    number: 5
+
+custom_init_commands:  # These commands will be executed before the game starts
+  - /replaceitem entity @s weapon.mainhand minecraft:blue_dye 64  # Give the player 64 blue dyes
+  - /replaceitem entity @s weapon.offhand minecraft:shears  # Give the player shears
+
+masked_actions: 
+  inventory: 0
+  hotbar.1: 0
+  hotbar.2: 0
+  hotbar.3: 0
+  hotbar.4: 0
+  hotbar.5: 0
+  hotbar.6: 0
+  hotbar.7: 0
+  hotbar.8: 0
+  hotbar.9: 0
